@@ -1,4 +1,3 @@
-# tets
 
 ## Project setup
 ```
