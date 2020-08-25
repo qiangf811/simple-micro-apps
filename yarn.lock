@@ -2286,7 +2286,7 @@ external-editor@^3.0.3:
   dependencies:
     chardet "^0.7.0"
     iconv-lite "^0.4.24"
-    tmp "^0.0.33"
+    tmp "^0.0.13"
 
 extglob@^2.0.4:
   version "2.0.4"
@@ -5599,9 +5599,9 @@ time-stamp@^1.0.0:
   resolved "http://nexus.winning.com.cn:8081/repository/npm-group/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
   integrity sha1-dkpaEa9QVhkhsTPztE5hhofg9cM=
 
-tmp@^0.0.33:
-  version "0.0.33"
-  resolved "http://nexus.winning.com.cn:8081/repository/npm-group/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
+tmp@^0.0.13:
+  version "0.0.13"
+  resolved "http://nexus.winning.com.cn:8081/repository/npm-group/tmp/-/tmp-0.0.13.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
   integrity sha1-bTQzWIl2jSGyvNoKonfO07G/rfk=
   dependencies:
     os-tmpdir "~1.0.2"
