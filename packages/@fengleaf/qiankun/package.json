@@ -5,7 +5,7 @@
   "author": "qiangfeng <qiangfeng@winning.com.cn>",
   "homepage": "",
   "license": "MIT",
-  "main": "dist/qiankun.js",
+  "main": "src/index.js",
   "module": "src/index.js",
   "directories": {
     "lib": "lib",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "release": "rollup -c"
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
