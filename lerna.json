@@ -3,6 +3,6 @@
     "packages/@fee-management/*",
     "packages/*"
   ],
-  "version": "0.0.4",
+  "version": "0.0.5",
   "npmClinet": "yarn"
 }
