@@ -6,6 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@fee-management/qiankun": "^0.0.1",
     "core-js": "^3.6.5",
