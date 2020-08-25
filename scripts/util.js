@@ -1,7 +1,7 @@
 const execa = require('execa')
 const fs = require('fs')
 const path = require('path')
-const packagesDir = path.resolve(__dirname, '../packages/@fee-management')
+const packagesDir = path.resolve(__dirname, '../packages/@ fengleaf')
 const files = fs.readdirSync(packagesDir)
 
 function execaShell (command, cwd) {

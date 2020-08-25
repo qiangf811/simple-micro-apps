@@ -1,5 +1,5 @@
 {
-  "name": "@fee-management/router-test",
+  "name": "@ fengleaf/router-test",
   "version": "0.0.6",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,7 +9,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@fee-management/qiankun": "^0.0.6",
+    "@ fengleaf/qiankun": "^0.0.6",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
@@ -22,5 +22,5 @@
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
   },
-  "gitHead": "6e0affa195fa0b94d67b93b51165fee8c15ec75d"
+  "gitHead": "e8f7e7bfb096b5348a3a90729cb61d39cf4f1208"
 }

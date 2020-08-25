@@ -1,6 +1,9 @@
 {
   "name": "winning-micro-project",
   "version": "0.0.1",
+  "workspaces": [
+    "packages/@ fengleaf/*"
+  ],
   "scripts": {
     "boot": "node scripts/bootstrap.js",
     "serve": "node scripts/serve.js",

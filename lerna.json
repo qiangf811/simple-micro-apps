@@ -1,8 +1,9 @@
 {
   "packages": [
-    "packages/@fee-management/*",
+    "packages/@ fengleaf/*",
     "packages/*"
   ],
   "version": "0.0.6",
-  "npmClinet": "yarn"
+  "npmClinet": "yarn",
+  "useWorkspaces": true
 }

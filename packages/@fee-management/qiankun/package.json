@@ -1,5 +1,5 @@
 {
-  "name": "@fee-management/qiankun",
+  "name": "@ fengleaf/qiankun",
   "version": "0.0.6",
   "description": "> TODO: description",
   "author": "qiangfeng <qiangfeng@winning.com.cn>",
@@ -24,5 +24,5 @@
     "eslint": "^7.7.0",
     "eslint-plugin-vue": "^6.2.2"
   },
-  "gitHead": "6e0affa195fa0b94d67b93b51165fee8c15ec75d"
+  "gitHead": "e8f7e7bfb096b5348a3a90729cb61d39cf4f1208"
 }

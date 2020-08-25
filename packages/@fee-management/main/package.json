@@ -1,5 +1,5 @@
 {
-  "name": "@fee-management/main",
+  "name": "@ fengleaf/main",
   "version": "0.0.6",
   "description": "app for winning-micro-project",
   "main": "index.js",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/qiangf811/simple-micro-apps/issues"
   },
-  "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@fee-management/app#readme",
+  "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@ fengleaf/app#readme",
   "dependencies": {
     "core-js": "^3.6.4",
     "element-ui": "^2.13.2",
@@ -43,5 +43,5 @@
     "@vue/cli-service": "~4.3.0",
     "vue-template-compiler": "^2.6.11"
   },
-  "gitHead": "6e0affa195fa0b94d67b93b51165fee8c15ec75d"
+  "gitHead": "e8f7e7bfb096b5348a3a90729cb61d39cf4f1208"
 }

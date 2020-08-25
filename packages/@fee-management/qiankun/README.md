@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const qiankun = require('@fee-management/qiankun');
+const qiankun = require('@ fengleaf/qiankun');
 
 // TODO: DEMONSTRATE API
 ```
