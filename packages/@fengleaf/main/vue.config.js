@@ -27,7 +27,7 @@ module.exports = {
     config.module
       .rule('svg')
       .exclude.add([
-        resolve('node_modules/winning-components/lib/finance-theme/icon-svg'),
+        resolve('../../../node_modules/winning-components/lib/finance-theme/icon-svg'),
         resolve('src/assets/icon-svg')
       ])
       .end()
@@ -36,7 +36,7 @@ module.exports = {
       .test(/\.svg$/)
       .include.add([
         resolve('src/assets/icon-svg'),
-        resolve('node_modules/winning-components/lib/finance-theme/icon-svg')
+        resolve('../../../node_modules/winning-components/lib/finance-theme/icon-svg')
       ])
       .end()
       .use('svg-sprite-loader')

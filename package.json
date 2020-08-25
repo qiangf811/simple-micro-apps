@@ -1,5 +1,6 @@
 {
   "name": "winning-micro-project",
+  "private": true,
   "version": "0.0.6",
   "workspaces": [
     "packages/@fengleaf/*"

@@ -1,9 +1,9 @@
 /* eslint-disable */
-import './public-path'
+import '../src/public-path'
 
 let instance = null
 let render = () => {}
-
+console.log('222')
 export default {
   install: function (Vue, options = {}) {
     render = function (props = {}) {

@@ -3,10 +3,10 @@
   "version": "0.0.8",
   "description": "> TODO: description",
   "author": "qiangfeng <qiangfeng@winning.com.cn>",
-  "module": "true",
   "homepage": "",
   "license": "MIT",
-  "main": "lib/qiankun.js",
+  "main": "dist/qiankun.js",
+  "module": "src/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,11 +18,22 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "release": "rollup -c"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
     "eslint": "^7.7.0",
     "eslint-plugin-vue": "^6.2.2"
   },
-  "gitHead": "e8f7e7bfb096b5348a3a90729cb61d39cf4f1208"
+  "gitHead": "e8f7e7bfb096b5348a3a90729cb61d39cf4f1208",
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "core-js": "3",
+    "rollup": "^2.26.5",
+    "rollup-plugin-babel": "^4.4.0"
+  }
 }
