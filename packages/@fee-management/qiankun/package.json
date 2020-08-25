@@ -1,0 +1,24 @@
+{
+  "name": "@fee-management/qiankun",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "qiangfeng <qiangfeng@winning.com.cn>",
+  "module": "true",
+  "homepage": "",
+  "license": "MIT",
+  "main": "lib/qiankun.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-plugin-vue": "^6.2.2"
+  }
+}
