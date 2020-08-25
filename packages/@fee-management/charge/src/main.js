@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
 
-import QIANKUN from '@ fengleaf/qiankun'
-export * from '@ fengleaf/qiankun'
+import QIANKUN from '@fengleaf/qiankun'
+export * from '@fengleaf/qiankun'
 
 Vue.config.productionTip = false
 

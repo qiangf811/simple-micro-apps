@@ -1,5 +1,5 @@
 {
-  "name": "@ fengleaf/router-test",
+  "name": "@fengleaf/router-test",
   "version": "0.0.6",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,7 +9,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@ fengleaf/qiankun": "^0.0.6",
+    "@fengleaf/qiankun": "^0.0.6",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",

@@ -1,5 +1,5 @@
 {
-  "name": "@ fengleaf/main",
+  "name": "@fengleaf/main",
   "version": "0.0.6",
   "description": "app for winning-micro-project",
   "main": "index.js",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/qiangf811/simple-micro-apps/issues"
   },
-  "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@ fengleaf/app#readme",
+  "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@fengleaf/app#readme",
   "dependencies": {
     "core-js": "^3.6.4",
     "element-ui": "^2.13.2",

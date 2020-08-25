@@ -1,5 +1,5 @@
 {
-  "name": "@ fengleaf/refund",
+  "name": "@fengleaf/refund",
   "version": "0.0.6",
   "description": "refund for winning-micro-project",
   "main": "index.js",
@@ -23,9 +23,9 @@
   "bugs": {
     "url": "https://github.com/qiangf811/simple-micro-apps/issues"
   },
-  "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@ fengleaf/refund#readme",
+  "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@fengleaf/refund#readme",
   "dependencies": {
-    "@ fengleaf/qiankun": "^0.0.6",
+    "@fengleaf/qiankun": "^0.0.6",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vuex": "^3.4.0"

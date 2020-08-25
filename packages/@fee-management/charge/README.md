@@ -1,4 +1,4 @@
-# @ fengleaf/charge
+# @fengleaf/charge
 
 ## Project setup
 ```

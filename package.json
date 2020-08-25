@@ -2,7 +2,7 @@
   "name": "winning-micro-project",
   "version": "0.0.1",
   "workspaces": [
-    "packages/@ fengleaf/*"
+    "packages/@fengleaf/*"
   ],
   "scripts": {
     "boot": "node scripts/bootstrap.js",
