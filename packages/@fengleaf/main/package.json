@@ -1,6 +1,6 @@
 {
   "name": "@fengleaf/main",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "app for winning-micro-project",
   "main": "index.js",
   "scripts": {
