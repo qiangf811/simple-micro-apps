@@ -3,7 +3,7 @@
 ## 项目结构
 ```
 my-lerna-repo/
-    ┣━ packages/
+    ┣━ packages/ 
     ┃     ┣━ main/ 微应用主项目
     ┃     ┃      ┣━ ...
     ┃     ┃      ┗━ package.json
