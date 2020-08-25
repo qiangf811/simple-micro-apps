@@ -1,6 +1,6 @@
 {
   "name": "@fee-management/router-test",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,7 +10,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@fee-management/qiankun": "^0.0.2",
+    "@fee-management/qiankun": "^0.0.3",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
