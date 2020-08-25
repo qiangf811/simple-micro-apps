@@ -30,11 +30,7 @@ exports.build = async function () {
     if (ignorePackages.includes(app)) continue
     const packagePath = path.resolve(packagesDir, app)
     await execaShell(`npm run build`, packagePath)
-    if (app === 'main') {
-      fse.copySync(path.join(packagePath, 'dist'), path.join(process.cwd(), `dist`))
-    } else {
-      fse.copySync(path.join(packagePath, 'dist'), path.join(process.cwd(), `dist/${app}`))
-    }
+    fse.copySync(path.join(packagePath, 'dist'), path.join(process.cwd(), app === 'main' ? `dist` : `dist/${app}`))
   }
 }
 
