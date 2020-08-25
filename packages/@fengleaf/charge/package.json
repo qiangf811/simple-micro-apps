@@ -1,6 +1,6 @@
 {
   "name": "@fengleaf/charge",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "charge for winning-micro-project",
   "author": {
     "name": "qiangfeng"
@@ -12,7 +12,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@fengleaf/qiankun": "^0.0.6",
+    "@fengleaf/qiankun": "^0.0.7",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vuex": "^3.4.0"
