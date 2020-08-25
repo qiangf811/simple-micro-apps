@@ -2,6 +2,7 @@ const { name } = require('./package.json')
 const isDev = process.env.NODE_ENV === 'development'
 const CDNListPlugin = require('./webpack-plugin-cdnList')
 module.exports = {
+  publicPath: isDev ? '/' : '/router-test',
   devServer: {
     port: 3004,
     overlay: {

@@ -1,6 +1,7 @@
 const { name } = require('./package')
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/refund',
   devServer: {
     hot: true,
     disableHostCheck: true,

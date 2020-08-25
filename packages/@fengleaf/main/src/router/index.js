@@ -10,14 +10,14 @@ const router = new Router({
   routes: []
 })
 
-export function initRouter (runMicroApps) {
+export function initRouter(runMicroApps) {
   store.dispatch('getMenuList').then(res => {
     const routes = res.map(item => ({
       path: item.path,
       name: item.path,
       component: () => import(`../views/index.vue`),
       meta: { title: item.name, requireAuth: true },
-      developmentUrl:  item.developmentUrl
+      [`${process.env.NODE_ENV}Url`]: item[`${process.env.NODE_ENV}Url`]
     }))
     router.addRoutes(routes.concat({
       path: '/',

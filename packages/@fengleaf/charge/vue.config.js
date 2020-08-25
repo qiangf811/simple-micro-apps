@@ -1,6 +1,8 @@
 const { name } = require('./package')
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/charge',
+  productionSourceMap: false,
   devServer: {
     hot: true,
     disableHostCheck: true,

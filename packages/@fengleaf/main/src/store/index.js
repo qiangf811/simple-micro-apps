@@ -43,7 +43,7 @@ export default new Vuex.Store({
                 if (appMenuRelativeUri) {
                   const path = appMenuRelativeUri.substr(appMenuRelativeUri.lastIndexOf('/') + 1)
                   item.name = ROUTER_MAP[path].name
-                  item.developmentUrl = ROUTER_MAP[path].developmentUrl
+                  item[`${process.env.NODE_ENV}Url`] = ROUTER_MAP[path][`${process.env.NODE_ENV}Url`]
                   item.path = `/${path}`
                 }
               })

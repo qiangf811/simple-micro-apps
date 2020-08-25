@@ -4,26 +4,26 @@ export const ROUTER_MAP = {
   outpCharge: {
     name: '门诊收费',
     developmentUrl: '//localhost:3001',
-    productionUrl: '/fee-management/outpCharge'
+    productionUrl: '/charge/'
   },
   outpRefund: {
     name: '门诊退费',
     developmentUrl: '//localhost:3000',
-    productionUrl: '/fee-management/outpRefund'
+    productionUrl: '/refund/'
   },
   orderTracking: {
     name: '订单查询',
     developmentUrl: '//localhost:3002',
-    productionUrl: '/fee-management/orderTracking'
+    productionUrl: '/orderTracking/'
   },
   feeCompare: {
     name: '费用对比',
     developmentUrl: '//localhost:3003',
-    productionUrl: '/fee-management/feeCompare'
+    productionUrl: '/feeCompare/'
   },
   receiptPrinting: {
     name: '票据打印',
     developmentUrl: '//localhost:3004',
-    productionUrl: '/fee-management/receiptPrinting'
+    productionUrl: '/router-test/'
   }
 }

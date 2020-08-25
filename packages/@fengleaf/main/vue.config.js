@@ -6,7 +6,9 @@ const isProduction = process.env.NODE_ENV === 'production'
 const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
-  publicPath: isProduction ? '/fee-management-outp/' : '/',
+  // publicPath: isProduction ? '/fee-management-outp/' : '/',
+  productionSourceMap: false,
+  publicPath: isProduction ? './' : '/',
   chainWebpack (config) {
     config.when(process.env.NODE_ENV === 'development', config => {
       // Docs and Usage please see https://github.com/winning-finance/winning-cookie-webpack-plugin#readme
