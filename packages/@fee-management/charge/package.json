@@ -1,7 +1,6 @@
 {
   "name": "@fee-management/charge",
   "version": "0.0.4",
-  "private": true,
   "description": "charge for winning-micro-project",
   "author": {
     "name": "qiangfeng"
