@@ -1,7 +1,8 @@
 {
-  "packages": [
-    "packages/@fengleaf/*"
-  ],
   "version": "0.0.6",
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "packages": [
+    "packages/@fengleaf/*"
+  ]
+}
