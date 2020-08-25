@@ -48,5 +48,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qiangf811/simple-micro-apps.git"
-  }
+  },
+  "gitHead": "6e0affa195fa0b94d67b93b51165fee8c15ec75d"
 }

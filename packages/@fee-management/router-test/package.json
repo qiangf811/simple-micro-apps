@@ -21,5 +21,6 @@
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "gitHead": "6e0affa195fa0b94d67b93b51165fee8c15ec75d"
 }
