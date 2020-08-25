@@ -1,6 +1,6 @@
 {
   "name": "@fee-management/refund",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "refund for winning-micro-project",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@fee-management/refund#readme",
   "dependencies": {
-    "@fee-management/qiankun": "^0.0.3",
+    "@fee-management/qiankun": "^0.0.4",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vuex": "^3.4.0"
