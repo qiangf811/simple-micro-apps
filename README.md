@@ -40,3 +40,13 @@ npm run serve
 ```
 npm run build
 ```
+
+### 本地部署生产环境
+先执行
+```
+npm run build
+```
+在执行
+```
+npm run depoly:test
+```
