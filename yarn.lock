@@ -2502,6 +2502,11 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@winning-plugin/webpack-filelist-export@^1.0.6":
+  version "1.0.6"
+  resolved "http://nexus.winning.com.cn:8081/repository/npm-group/@winning-plugin/webpack-filelist-export/-/webpack-filelist-export-1.0.6.tgz#9a0f992c4367db5a70c8627799fd5b95bd9a8767"
+  integrity sha512-iI4NthJowEB0xDe8eD2hUWQCkwH5dy0++Ae+toc0iRdrBGbq4266cxcGjFTNlIO68TZs23ZmGyWx1EwbMFEpWA==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "http://nexus.winning.com.cn:8081/repository/npm-group/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"

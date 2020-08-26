@@ -1,6 +1,7 @@
 const { name } = require('./package.json')
 const isDev = process.env.NODE_ENV === 'development'
-const CDNListPlugin = require('./webpack-plugin-cdnList')
+const fileListPugin = require('@winning-plugin/webpack-filelist-export')
+
 module.exports = {
   publicPath: isDev ? '/' : '/router-test',
   devServer: {
@@ -15,14 +16,16 @@ module.exports = {
   },
   chainWebpack: config => {
     config.when(!isDev, config => {
-      config.plugin('CDNListPlugin').use(CDNListPlugin, [{
-        js: [
-          'https://unpkg.com/vue@2.6.11/dist/vue.min.js',
-          'https://unpkg.com/vue-router@3.2.0/dist/vue-router.min.js',
-          'https://unpkg.com/vuex@3.0.1/dist/vuex.min.js',
-          'https://unpkg.com/element-ui/lib/index.js'
-        ]
-      }])
+      config.plugin('filePlugin').after('html').use(fileListPugin, [
+        {
+          jsExternals: [
+            '/web-public/js/vue.min.js',
+            '/web-public/js/vue-router.min.js',
+            '/web-public/js/vuex.min.js',
+            '/web-public/js/element-ui.js'
+          ]
+        }
+      ])
       config.externals({
         'vue': 'Vue',
         'vue-router': 'VueRouter',

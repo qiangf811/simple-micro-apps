@@ -2,12 +2,22 @@
 import '../src/public-path'
 
 let instance = null
-let render = () => {}
+let render = () => { }
+let appBootstrap
+let appMount
+let appUnmount
+const noop = () => { }
+
 export default {
   install: function (Vue, options = {}) {
+    const { bootstrap = noop, mount = noop, unmount = noop, ...vue } = options
+    appBootstrap = bootstrap
+    appMount = mount
+    appUnmount = unmount
+
     render = function (props = {}) {
       const { container, keepAlive } = props
-      const opts = { ...options }
+      const opts = { ...vue }
       let { router } = opts
       if (router) {
         router = router()
@@ -42,16 +52,17 @@ export default {
   }
 }
 
-export async function bootstrap () {
-  // console.log('[vue] vue app bootstraped')
+export async function bootstrap(props) {
+  appBootstrap(props)
 }
 
-export async function mount (props) {
+export async function mount(props) {
   // console.log('[vue] props from main framework', props)
   render(props)
+  appMount(props)
 }
 
-export async function unmount (props) {
+export async function unmount(props) {
   const { keepAlive } = props
   if (keepAlive) {
     const cachedInstance = instance.cachedInstance || instance
@@ -69,4 +80,5 @@ export async function unmount (props) {
     instance.$el.innerHTML = ''
     instance = null
   }
+  appUnmount(props)
 }

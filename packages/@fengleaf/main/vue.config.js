@@ -1,16 +1,15 @@
 const path = require('path')
 const WinCookiePlugin = require('winning-cookie-webpack-plugin')
-
-const isProduction = process.env.NODE_ENV === 'production'
+const fileListPugin = require('@winning-plugin/webpack-filelist-export')
+const isDev = process.env.NODE_ENV === 'development'
 
 const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
-  // publicPath: isProduction ? '/fee-management-outp/' : '/',
   productionSourceMap: false,
-  publicPath: isProduction ? './' : '/',
+  publicPath: isDev ? './' : '/',
   chainWebpack (config) {
-    config.when(process.env.NODE_ENV === 'development', config => {
+    config.when(isDev, config => {
       // Docs and Usage please see https://github.com/winning-finance/winning-cookie-webpack-plugin#readme
       config.plugin('WinCookiePlugin').use(WinCookiePlugin, [{
         userInfoParams: {
@@ -24,6 +23,24 @@ module.exports = {
           'W-SEQ': 21
         }
       }])
+    })
+    config.when(!isDev, config => {
+      config.plugin('filePlugin').after('html').use(fileListPugin, [
+        {
+          jsExternals: [
+            '/web-public/js/vue.min.js',
+            '/web-public/js/vue-router.min.js',
+            '/web-public/js/vuex.min.js',
+            '/web-public/js/element-ui.js'
+          ]
+        }
+      ])
+      config.externals({
+        'vue': 'Vue',
+        'vue-router': 'VueRouter',
+        'vuex': 'Vuex',
+        'element-ui': 'ELEMENT'
+      })
     })
     // set svg-sprite-loader
     config.module

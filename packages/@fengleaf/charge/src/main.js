@@ -14,5 +14,10 @@ if (window.__POWERED_BY_QIANKUN__) {
 
 Vue.use(QIANKUN, {
   render: h => h(App),
-  store
+  store,
+  bootstrap: () => {
+    console.log('哈哈哈');
+  },
+  mount: () => { },
+  unmount: () => { }
 })

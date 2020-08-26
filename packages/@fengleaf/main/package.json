@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/qiangf811/simple-micro-apps/packages/@fengleaf/app#readme",
   "dependencies": {
+    "@winning-plugin/webpack-filelist-export": "^1.0.6",
     "core-js": "^3.6.4",
     "element-ui": "^2.13.2",
     "js-cookie": "^2.2.1",

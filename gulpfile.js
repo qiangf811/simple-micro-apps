@@ -48,6 +48,10 @@ const prodTest = async function () {
     target: 'http://172.16.6.213',
     logs: true
   }))
+  app.use(proxy('/web-public', {
+    target: 'http://172.16.6.213',
+    logs: true
+  }))
   app.listen(8080)
   console.log('app listen at http://localhost:8080')
 }
@@ -62,4 +66,4 @@ exports.start = start
 
 exports.release = series(clear, build)
 
-exports.releaseTest = prodTest
+exports.releaseTest = series(clear, build, prodTest)

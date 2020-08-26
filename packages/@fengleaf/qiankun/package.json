@@ -32,6 +32,7 @@
   "gitHead": "e8f7e7bfb096b5348a3a90729cb61d39cf4f1208",
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
+    "@winning-plugin/webpack-filelist-export": "^1.0.6",
     "core-js": "3",
     "rollup": "^2.26.5",
     "rollup-plugin-babel": "^4.4.0"
