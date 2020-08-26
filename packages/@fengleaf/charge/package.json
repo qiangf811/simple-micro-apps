@@ -12,8 +12,8 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@fengleaf/qiankun": "^0.0.9",
     "@winning-plugin/webpack-filelist-export": "^1.0.6",
+    "@winning/micro-app": "^0.0.9",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vuex": "^3.4.0"

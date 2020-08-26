@@ -1,17 +1,16 @@
 const { src, dest, series } = require('gulp')
 const execa = require('execa')
 const fs = require('fs')
-const chalk = require('chalk')
 const path = require('path')
 const Koa = require('koa')
 const proxy = require('koa-proxies')
 const del = require('del')
 const distPath = path.resolve(process.cwd(), 'dist')
 const packagesDir = path.resolve(__dirname, './packages/@fengleaf')
-const files = fs.readdirSync(packagesDir)
-const ignorePackages = ['qiankun']
+const files = fs.readdirSync(packagesDir).filter(file => !file.startsWith('.'))
 
 function execaShell (command, cwd) {
+  console.log(cwd)
   return execa.command(command, {
     stdout: 'inherit',
     cwd
@@ -21,7 +20,6 @@ function execaShell (command, cwd) {
 const start = function () {
   const promises = []
   for (const app of files) {
-    if (ignorePackages.includes(app)) continue
     const packagePath = path.resolve(packagesDir, app)
     promises.push(execaShell(`npm run serve`, packagePath))
   }
@@ -34,7 +32,6 @@ const clear = function () {
 
 const build = async function () {
   for (const app of files) {
-    if (ignorePackages.includes(app)) continue
     const packagePath = path.resolve(packagesDir, app)
     await execaShell(`npm run build`, packagePath)
     src(`${path.join(packagePath, 'dist')}/**`).pipe(dest(path.join(process.cwd(), app === 'main' ? `dist` : `dist/${app}`)))
@@ -54,12 +51,6 @@ const prodTest = async function () {
   }))
   app.listen(8080)
   console.log('app listen at http://localhost:8080')
-}
-
-const genLogger = function (word) {
-  return async function logger () {
-    return console.log(`${chalk.green(word)}`)
-  }
 }
 
 exports.start = start

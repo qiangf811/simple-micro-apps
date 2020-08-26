@@ -16,7 +16,7 @@ export default function run (routes = []) {
   }))
   registerMicroApps(microApps)
 
-  routes[0] && setDefaultMountApp(`${routes[0].path}`)
+  // routes[0] && setDefaultMountApp(`${routes[0].path}`)
 
   start()
 }
