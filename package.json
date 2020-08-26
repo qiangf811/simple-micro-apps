@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "boot": "node scripts/bootstrap.js",
-    "serve": "node scripts/serve.js",
-    "build": "node scripts/build.js",
-    "release:test": "node scripts/releaseTest.js"
+    "serve": "gulp start",
+    "build": "gulp release",
+    "release:test": "gulp releaseTest"
   },
   "main": "index.js",
   "license": "MIT",
