@@ -11,7 +11,7 @@ export default function run (routes = []) {
     container: '#subapp-viewport',
     activeRule: genActiveRule(`${route.path}`),
     props: {
-      keepAlive: true // 是否缓存，服务于vue的keep-alive
+      keepAlive: false // 是否缓存，服务于vue的keep-alive
     }
   }))
   registerMicroApps(microApps)

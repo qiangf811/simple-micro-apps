@@ -24,6 +24,9 @@
       },
       currentApplication () {
         return this.$store.getters.currentApplication
+      },
+      redirect () {
+        return this.$store.state.redirect
       }
     },
     watch: {
@@ -33,7 +36,8 @@
             const { children = [] } = this.currentApplication
             const { path } = children[0] || {}
             if (path) { // 当前系统存在菜单，判断是否和当前一致，如果不一致就进行跳转
-              if (path !== this.$router.currentRoute.path) {
+              debugger
+              if (this.redirect && path !== this.$router.currentRoute.path) {
                 this.$router.push(children[0].path)
               }
             } else {

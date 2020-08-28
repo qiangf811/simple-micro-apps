@@ -1,6 +1,6 @@
 export default [
   {
-    'appSystemId': '4303253901',
+    'appSystemId': '1',
     'appSystemCode': '959608',
     'appSystemName': '账户管理系统',
     'appSystemRelativeUri': 'web-account-management',
@@ -12,7 +12,7 @@ export default [
         'appMenuId': '430270826411',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '869496',
-        appMenuName: '费用比对',
+        appMenuName: '账户-1',
         'appMenuLevel': null,
         'appMenuRelativeUri': '/feeCompare',
         'appMenuTypeCode': '256053',
@@ -27,7 +27,7 @@ export default [
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '869497',
         'appMenuLevel': null,
-        appMenuName: '订单查询',
+        appMenuName: '账户-2',
         'appMenuRelativeUri': '/#/orderTracking',
         'appMenuTypeCode': '256053',
         'appOpTypeCode': '256484',
@@ -36,53 +36,11 @@ export default [
         'deactivatedAt': null,
         'pareAppMenuCode': null,
         port: 3001
-      }, {
-        'appMenuId': '430315580645',
-        'activatedAt': '2020-04-24 15:18:57',
-        'appMenuCode': '958109',
-        'appMenuLevel': '0',
-        appMenuName: '门诊收费',
-        'appMenuRelativeUri': 'outpCharge',
-        'appMenuTypeCode': '256053',
-        'appOpTypeCode': '256484',
-        'appPermissionId': '4303155807',
-        'appPermissionTypeCode': '256489',
-        'deactivatedAt': null,
-        'pareAppMenuCode': null,
-        port: 3001
-      }, {
-        'appMenuId': '4303155810',
-        'activatedAt': '2020-04-24 15:18:57',
-        'appMenuCode': '958110',
-        'appMenuLevel': '0',
-        appMenuName: '门诊退费',
-        'appMenuRelativeUri': 'outpRefund',
-        'appMenuTypeCode': '256053',
-        'appOpTypeCode': '256484',
-        'appPermissionId': '4303155811',
-        'appPermissionTypeCode': '256489',
-        'deactivatedAt': null,
-        'pareAppMenuCode': null,
-        port: 3001
-      }, {
-        appMenuName: '票据打印',
-        'appMenuId': '104447832152909825',
-        'activatedAt': '2020-04-24 15:18:57',
-        'appMenuCode': '399201997',
-        'appMenuLevel': null,
-        'appMenuRelativeUri': '/#/receiptPrinting',
-        'appMenuTypeCode': '256053',
-        'appOpTypeCode': '256483',
-        'appPermissionId': '104447832152909825',
-        'appPermissionTypeCode': '256489',
-        'deactivatedAt': null,
-        'pareAppMenuCode': null,
-        port: 3005
       }
     ]
 
   }, {
-    'appSystemId': '4303595742',
+    'appSystemId': '2',
     'appSystemCode': '951678',
     'appSystemName': '住院护士站',
     'appSystemRelativeUri': 'web-carnation',
@@ -94,7 +52,7 @@ export default [
         'appMenuId': '4302708264',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '869496',
-        appMenuName: '住院比对',
+        appMenuName: '住院-1',
         'appMenuLevel': null,
         'appMenuRelativeUri': '/wwwww',
         'appMenuTypeCode': '256053',
@@ -109,7 +67,7 @@ export default [
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '869497',
         'appMenuLevel': null,
-        appMenuName: '方法查询',
+        appMenuName: '住院-2',
         'appMenuRelativeUri': '/#/3ffff',
         'appMenuTypeCode': '256053',
         'appOpTypeCode': '256484',
@@ -118,58 +76,61 @@ export default [
         'deactivatedAt': null,
         'pareAppMenuCode': null,
         port: 1002
-      }, {
+      }
+    ]
+  }, {
+    'appSystemId': '3',
+    'appSystemCode': '958576',
+    'appSystemName': '病案系统',
+    'appSystemRelativeUri': 'web-medical-archive-portal/index/#/toDoList',
+    'appSystemPicUrl': 'c:\\',
+    'pareAppSystemCode': null,
+    'pareAppSystemName': null,
+    appMenu: [
+      {
         'appMenuId': '430315580645',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '958109',
         'appMenuLevel': '0',
-        appMenuName: '哈哈哈收费',
-        'appMenuRelativeUri': 'gthhg',
+        appMenuName: '病案-1',
+        'appMenuRelativeUri': 'outpCharge',
         'appMenuTypeCode': '256053',
         'appOpTypeCode': '256484',
         'appPermissionId': '4303155807',
         'appPermissionTypeCode': '256489',
         'deactivatedAt': null,
         'pareAppMenuCode': null,
-        port: 1003
+        port: 3001
       }, {
-        'appMenuId': '4303155810qw',
+        'appMenuId': '4303155810',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '958110',
         'appMenuLevel': '0',
-        appMenuName: '几节课退费',
-        'appMenuRelativeUri': 'cccc',
+        appMenuName: '病案-2',
+        'appMenuRelativeUri': 'outpRefund',
         'appMenuTypeCode': '256053',
         'appOpTypeCode': '256484',
         'appPermissionId': '4303155811',
         'appPermissionTypeCode': '256489',
         'deactivatedAt': null,
         'pareAppMenuCode': null,
-        port: 1004
+        port: 3001
       }, {
-        appMenuName: '低速挡打印',
+        appMenuName: '病案-3',
         'appMenuId': '104447832152909825',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '399201997',
         'appMenuLevel': null,
-        'appMenuRelativeUri': '/#/llll',
+        'appMenuRelativeUri': '/#/receiptPrinting',
         'appMenuTypeCode': '256053',
         'appOpTypeCode': '256483',
         'appPermissionId': '104447832152909825',
         'appPermissionTypeCode': '256489',
         'deactivatedAt': null,
         'pareAppMenuCode': null,
-        port: 1005
+        port: 3005
       }
     ]
-  }, {
-    'appSystemId': '4303212347',
-    'appSystemCode': '958576',
-    'appSystemName': '病案系统',
-    'appSystemRelativeUri': 'web-medical-archive-portal/index/#/toDoList',
-    'appSystemPicUrl': 'c:\\',
-    'pareAppSystemCode': null,
-    'pareAppSystemName': null
   }, {
     'appSystemId': '4302475966',
     'appSystemCode': '465362',

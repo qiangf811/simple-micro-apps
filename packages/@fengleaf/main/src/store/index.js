@@ -18,28 +18,23 @@ export default new Vuex.Store({
     applicationList: [],
     clonedApplicationList: [],
     currentAppId: currentAppId,
+    redirect: true,
     userInfo: { ...userInfo }
 
   },
   getters: {
     currentApplication: (state) => state.clonedApplicationList.find(({ id }) => id === state.currentAppId) || {},
     menu2AppMap: (state) => {
-      const dd = state.clonedApplicationList
+      return state.applicationList
         .map(app => app.children.map(menu => menu)).flat()
         .reduce((r, { path, parentIds }) => {
-          if (path in r) {
-            r[path] = r[path].length > parentIds.length ? r[path] : parentIds
-          } else {
-            r[path] = parentIds
-          }
+          r[path] = parentIds
           return r
         }, {})
-      console.log(dd)
-      return dd
     }
   },
   mutations: {
-    ADD_CURRENT_APP_ID: (state, id) => {
+    TOOGLE_CURRENT_APP_ID: (state, id) => {
       state.currentAppId = id
       window.localStorage.setItem('WINNING_HIS_MAIN_APP_ID', id)
     },
@@ -61,7 +56,11 @@ export default new Vuex.Store({
         // 删除
         const index = currentApp.children.findIndex(({ path }) => path === menu.path)
         currentApp.children.splice(index, 1)
+        menu.parentIds.splice(menu.parentIds.findIndex(id => id === currentAppId), 1)
       }
+    },
+    TOOGLE_REDIRECT: (state, redirect) => {
+      state.redirect = redirect
     }
   },
   actions: {
@@ -87,26 +86,27 @@ export default new Vuex.Store({
       })
     },
     toggleApp ({ commit, state, getters }, id) {
-      const map = getters.menu2AppMap
-      // 将path与系统id的映射关系中parentIds重置，将当前切换的系统id放置到最后
-      for (const key of Object.keys(map)) {
-        const index = map[key].indexOf(id)
-        const len = map[key].length - 1
-        if (~index) {
-          let temp = map[key][len]
-          map[key][len] = map[key][index]
-          map[key][index] = temp
-        }
-      }
-      commit('ADD_CURRENT_APP_ID', id)
+      // 为了解决用户在点击浏览器导航后退-前进时，修复导航菜单数据
+      // 修正当前菜单对应的系统id数组集合，将当前的系统的id放置数组最后一位
+      restoreMenu2AppIdsStack(getters.menu2AppMap, id)
+      // 为了解决用户在点击浏览器导航后退-前进时，修复导航
+      commit('TOOGLE_REDIRECT', true)
+      commit('TOOGLE_CURRENT_APP_ID', id)
     },
+    /**
+     * 为了解决用户在点击浏览器导航后退-前进时，修复导航菜单数据专用
+     */
     checkAppChange ({ commit, state, getters }, path) {
       const { currentAppId } = state
       const menuParentIds = getters.menu2AppMap[path]
-      const menuApplicationId = menuParentIds[menuParentIds.length - 1] // 只取最后一个
-      if (currentAppId !== menuApplicationId) {
-        console.log('当前不是该系统的路由，需要修正')
-        commit('ADD_CURRENT_APP_ID', menuApplicationId)
+      if (menuParentIds) {
+        const menuApplicationId = menuParentIds[menuParentIds.length - 1] // 只取队列里的最后一个，因为最后一个是id是当前系统的id
+        if (currentAppId !== menuApplicationId) {
+          console.log('当前不是该系统的路由，需要修正')
+          restoreMenu2AppIdsStack(getters.menu2AppMap, menuApplicationId) // 修正当前菜单对应的系统id数组集合，将当前的系统的id放置数组最后一位
+          commit('TOOGLE_REDIRECT', false)
+          commit('TOOGLE_CURRENT_APP_ID', menuApplicationId)
+        }
       }
     },
     getMenuList ({ commit }) {
@@ -165,3 +165,17 @@ export default new Vuex.Store({
     }
   }
 })
+
+function restoreMenu2AppIdsStack (obj, appId) {
+  // 将path与系统id的映射关系中parentIds重置，将当前切换的系统id放置到最后
+  for (const key of Object.keys(obj)) {
+    const index = obj[key].indexOf(appId)
+    const len = obj[key].length - 1
+    if (~index) {
+      let temp = obj[key][len]
+      obj[key][len] = obj[key][index]
+      obj[key][index] = temp
+    }
+  }
+  console.log(obj)
+}
