@@ -9,7 +9,7 @@ export default [
     'pareAppSystemName': null,
     appMenu: [
       {
-        'appMenuId': '4302708264',
+        'appMenuId': '430270826411',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '869496',
         appMenuName: '费用比对',
@@ -37,7 +37,7 @@ export default [
         'pareAppMenuCode': null,
         port: 3001
       }, {
-        'appMenuId': '4303155806',
+        'appMenuId': '430315580645',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '958109',
         'appMenuLevel': '0',
@@ -49,7 +49,7 @@ export default [
         'appPermissionTypeCode': '256489',
         'deactivatedAt': null,
         'pareAppMenuCode': null,
-        port: 3004
+        port: 3001
       }, {
         'appMenuId': '4303155810',
         'activatedAt': '2020-04-24 15:18:57',
@@ -63,7 +63,7 @@ export default [
         'appPermissionTypeCode': '256489',
         'deactivatedAt': null,
         'pareAppMenuCode': null,
-        port: 3004
+        port: 3001
       }, {
         appMenuName: '票据打印',
         'appMenuId': '104447832152909825',
@@ -105,7 +105,7 @@ export default [
         'pareAppMenuCode': null,
         port: 1001
       }, {
-        'appMenuId': '4302708265',
+        'appMenuId': '4302708265222',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '869497',
         'appMenuLevel': null,
@@ -119,7 +119,7 @@ export default [
         'pareAppMenuCode': null,
         port: 1002
       }, {
-        'appMenuId': '4303155806',
+        'appMenuId': '430315580645',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '958109',
         'appMenuLevel': '0',
@@ -133,7 +133,7 @@ export default [
         'pareAppMenuCode': null,
         port: 1003
       }, {
-        'appMenuId': '4303155810',
+        'appMenuId': '4303155810qw',
         'activatedAt': '2020-04-24 15:18:57',
         'appMenuCode': '958110',
         'appMenuLevel': '0',

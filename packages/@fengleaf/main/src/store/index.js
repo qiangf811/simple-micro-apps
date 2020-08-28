@@ -26,8 +26,12 @@ export default new Vuex.Store({
     menu2AppMap: (state) => {
       const dd = state.clonedApplicationList
         .map(app => app.children.map(menu => menu)).flat()
-        .reduce((r, { path, parentId }) => {
-          r[path] = parentId
+        .reduce((r, { path, parentIds }) => {
+          if (path in r) {
+            r[path] = r[path].length > parentIds.length ? r[path] : parentIds
+          } else {
+            r[path] = parentIds
+          }
           return r
         }, {})
       console.log(dd)
@@ -49,8 +53,9 @@ export default new Vuex.Store({
       if (!currentApp) return
       currentApp.children = currentApp.children || []
       if (increase) { // 新增
-        debugger
-        menu.parentId = currentAppId
+        if (!menu.parentIds.includes(currentAppId)) {
+          menu.parentIds.push(currentAppId)
+        }
         currentApp.children.push(menu)
       } else {
         // 删除
@@ -68,7 +73,7 @@ export default new Vuex.Store({
             path: app.appSystemRelativeUri,
             id: app.appSystemId,
             children: Array.isArray(app.appMenu) ? app.appMenu.map(menu => ({
-              parentId: app.appSystemId,
+              parentIds: [app.appSystemId],
               id: menu.appMenuId,
               name: menu.appMenuName,
               path: `/${menu.appMenuRelativeUri.substr(menu.appMenuRelativeUri.lastIndexOf('/') + 1)}`,
@@ -81,11 +86,26 @@ export default new Vuex.Store({
         })
       })
     },
+    toggleApp ({ commit, state, getters }, id) {
+      const map = getters.menu2AppMap
+      // 将path与系统id的映射关系中parentIds重置，将当前切换的系统id放置到最后
+      for (const key of Object.keys(map)) {
+        const index = map[key].indexOf(id)
+        const len = map[key].length - 1
+        if (~index) {
+          let temp = map[key][len]
+          map[key][len] = map[key][index]
+          map[key][index] = temp
+        }
+      }
+      commit('ADD_CURRENT_APP_ID', id)
+    },
     checkAppChange ({ commit, state, getters }, path) {
-      console.log('checkAppChange')
       const { currentAppId } = state
-      const menuApplicationId = getters.menu2AppMap[path]
+      const menuParentIds = getters.menu2AppMap[path]
+      const menuApplicationId = menuParentIds[menuParentIds.length - 1] // 只取最后一个
       if (currentAppId !== menuApplicationId) {
+        console.log('当前不是该系统的路由，需要修正')
         commit('ADD_CURRENT_APP_ID', menuApplicationId)
       }
     },

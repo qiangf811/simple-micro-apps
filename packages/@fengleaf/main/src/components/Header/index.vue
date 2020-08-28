@@ -219,7 +219,8 @@
           })
         },
         handlerToggleApplication ({ id }) {
-          this.$store.commit('ADD_CURRENT_APP_ID', id)
+          // this.$store.commit('ADD_CURRENT_APP_ID', id)
+          this.$store.dispatch('toggleApp', id)
           this.$refs['application-select'].doClose()
         },
         handleUserDropdownClick (command) {
