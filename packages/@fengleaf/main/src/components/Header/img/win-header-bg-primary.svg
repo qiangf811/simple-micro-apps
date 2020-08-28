@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2560px" height="48px" viewBox="0 0 2560 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>顶部导航背景-浅色版</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="2560" height="48"></rect>
+        <linearGradient x1="39.2416131%" y1="42.0755857%" x2="89.3876461%" y2="77.7518087%" id="linearGradient-3">
+            <stop stop-color="#5A7BEF" offset="0%"></stop>
+            <stop stop-color="#2660F7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="10.5480121%" y1="16.2086648%" x2="76.5687053%" y2="5.59780869%" id="linearGradient-4">
+            <stop stop-color="#043ED6" offset="0%"></stop>
+            <stop stop-color="#2660F7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="39.2416131%" y1="42.0755857%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#5A7BEF" offset="0%"></stop>
+            <stop stop-color="#2660F7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="顶部导航背景-浅色版">
+            <g id="矩形">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#2D5AFA" xlink:href="#path-1"></use>
+                <rect fill="url(#linearGradient-3)" opacity="0.396507626" mask="url(#mask-2)" x="-17" y="-384" width="442" height="424" rx="212"></rect>
+                <rect id="矩形-copy-17" fill-opacity="0.8" fill="url(#linearGradient-4)" opacity="0.396507626" mask="url(#mask-2)" x="189" y="-133" width="208" height="200" rx="100"></rect>
+                <rect id="矩形-copy-15" fill-opacity="0.8" fill="url(#linearGradient-5)" opacity="0.4" mask="url(#mask-2)" x="1699" y="-130" width="208" height="200" rx="100"></rect>
+                <rect id="矩形-copy-15备份" fill-opacity="0.8" fill="url(#linearGradient-5)" opacity="0.4" mask="url(#mask-2)" x="2332" y="7" width="152" height="146" rx="73"></rect>
+                <polygon fill="#5175F4" mask="url(#mask-2)" points="0 46 591.018555 46 745.943359 46 2560 46 2560 48 0 48"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

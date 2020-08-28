@@ -1,4 +1,4 @@
-import { registerMicroApps, start, setDefaultMountApp } from 'qiankun'
+import { registerMicroApps, start } from 'qiankun'
 
 function genActiveRule (routerPrefix) {
   return location => location.pathname.startsWith(routerPrefix)
@@ -7,7 +7,7 @@ function genActiveRule (routerPrefix) {
 export default function run (routes = []) {
   const microApps = routes.map(route => ({
     name: route.name.replace('/', ''),
-    entry: route[`${process.env.NODE_ENV}Url`],
+    entry: route.entry,
     container: '#subapp-viewport',
     activeRule: genActiveRule(`${route.path}`),
     props: {
@@ -15,8 +15,5 @@ export default function run (routes = []) {
     }
   }))
   registerMicroApps(microApps)
-
-  // routes[0] && setDefaultMountApp(`${routes[0].path}`)
-
   start()
 }
