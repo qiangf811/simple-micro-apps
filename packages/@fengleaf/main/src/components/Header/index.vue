@@ -8,6 +8,7 @@
                         <div v-for="item in applicationList" :key="item.id" class="application-option"
                             @click="handlerToggleApplication(item)">
                             {{item.name}}</div>
+                        <div v-if="!applicationList.length"  class="application-option">暂无数据</div>
                     </div>
                     <span slot="reference"
                         class="application-name">
@@ -218,7 +219,11 @@
             }
           })
         },
-        handlerToggleApplication ({ id }) {
+        handlerToggleApplication ({ id, children }) {
+          if (!children.length) {
+            this.$message.warning('该系统未配置菜单！')
+            return
+          }
           // this.$store.commit('ADD_CURRENT_APP_ID', id)
           this.$store.dispatch('toggleApp', id)
           this.$refs['application-select'].doClose()
