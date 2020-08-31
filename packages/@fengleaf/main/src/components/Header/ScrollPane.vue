@@ -80,7 +80,7 @@
         bottom: 0px;
       }
       .el-scrollbar__wrap {
-        height: 63px;
+        height: 65px;
       }
       .el-scrollbar__view{
           height: 48px;

@@ -13,11 +13,7 @@ Router.prototype.push = function push (location) {
 
 const router = new Router({
   mode: 'history',
-  routes: [{
-    path: '/blank',
-    name: 'blank',
-    component: ()=>import('../views/empty')
-  }]
+  routes: []
 })
 
 export function initRouter (runMicroApps) {

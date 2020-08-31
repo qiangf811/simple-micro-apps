@@ -9,7 +9,7 @@ export default {
                 const words = 'died in status LOADING_SOURCE_CODE: Failed to fetch'
                 if (message.includes(words)) {
                     // console.log(message);
-                    const routePath = `/${message.match(/application\s(\S*)\sdied/)[1].replaceAll("'",'')}`
+                    const routePath = `/${message.match(/application\s(\S*)\sdied/)[1].replace(/'/g, '')}`
                     // console.log(routePath)
                     if (this.$router.currentRoute.path === routePath) {
                         import('../views/404').then(component => {
