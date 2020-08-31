@@ -7,7 +7,7 @@ export default [
     'appSystemPicUrl': 'c:\\',
     'pareAppSystemCode': null,
     'pareAppSystemName': null,
-    appMenu: [
+    appMenuList: [
       {
         'appMenuId': '430270826411',
         'activatedAt': '2020-04-24 15:18:57',
@@ -47,7 +47,7 @@ export default [
     'appSystemPicUrl': 'c:\\',
     'pareAppSystemCode': null,
     'pareAppSystemName': null,
-    appMenu: [
+    appMenuList: [
       {
         'appMenuId': '4302708264',
         'activatedAt': '2020-04-24 15:18:57',
@@ -86,7 +86,7 @@ export default [
     'appSystemPicUrl': 'c:\\',
     'pareAppSystemCode': null,
     'pareAppSystemName': null,
-    appMenu: [
+    appMenuList: [
       {
         'appMenuId': '430315580645',
         'activatedAt': '2020-04-24 15:18:57',

@@ -71,7 +71,7 @@ export default new Vuex.Store({
             name: app.appSystemName,
             path: app.appSystemRelativeUri,
             id: app.appSystemId,
-            children: Array.isArray(app.appMenu) ? app.appMenu.map(menu => ({
+            children: Array.isArray(app.appMenuList) ? app.appMenuList.map(menu => ({
               parentIds: [app.appSystemId],
               id: menu.appMenuId,
               name: menu.appMenuName,
