@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { Message } from 'element-ui'
 import Cookies from 'js-cookie'
-import { getApplicationMenu } from '@/api/common'
+import { getApplicationList } from '@/api/common'
 import { APP_MENU_COD, ROUTER_MAP } from '../constant'
 import data from '../../data'
 import { deepClone } from '../lib/util'
@@ -65,7 +65,25 @@ export default new Vuex.Store({
   },
   actions: {
     initApplication ({ commit }) {
-      return new Promise((resolve, reject) => {
+      return new Promise(async(resolve, reject) => {
+        try {
+          const res = await getApplicationList({
+            userId: userInfo.userId,
+            soid: [userInfo.hospitalSOID]
+          })
+          if(res.success){
+
+          } else{
+
+          }
+        } catch (error) {
+          Message({
+            message: '服务异常，获取应用菜单失败',
+            type: 'error',
+            duration: 5000
+          })
+          reject(error)
+        }
         Promise.resolve(data).then(appList => {
           const applicationList = appList.map(app => ({
             name: app.appSystemName,
