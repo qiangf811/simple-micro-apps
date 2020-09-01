@@ -7,7 +7,7 @@ function genActiveRule (routerPrefix) {
 export default function run (routes = []) {
   const microApps = routes.map(route => ({
     name: route.name.replace('/', ''),
-    entry: route.entry,
+    entry: route.microAppEntry,
     container: '#subapp-viewport',
     activeRule: genActiveRule(`${route.path}`),
     props: {

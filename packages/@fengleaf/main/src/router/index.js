@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Container from '../views/index.vue'
 import store from '../store'
+import path from 'path'
 
 Vue.use(Router)
 
@@ -22,9 +23,8 @@ export function initRouter (runMicroApps) {
       path: item.path,
       name: item.path,
       component: Container,
-      entry: `//localhost:${item.port}`
+      microAppEntry: '//172.16.6.213' + path.resolve('/', item.relativePath + '/')
     }))
-    console.log(routes)
     router.addRoutes(routes)
     runMicroApps && runMicroApps(routes)
   })
