@@ -1,4 +1,4 @@
-## 门诊费用管理-微应用管理仓库
+
 
 ## 项目结构
 ```
@@ -26,6 +26,8 @@ my-lerna-repo/
 ```
 sudo npm install -g lerna
 ```
+执行`npm install`
+
 其次安装所有packages的依赖
 ```
 lerna bootstrap
