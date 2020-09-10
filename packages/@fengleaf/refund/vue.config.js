@@ -1,6 +1,5 @@
 const { name } = require('./package')
 const isDev = process.env.NODE_ENV === 'development'
-const fileListPugin = require('@winning-plugin/webpack-filelist-export')
 
 module.exports = {
   publicPath: isDev ? '/' : '/refund',
@@ -15,26 +14,6 @@ module.exports = {
     headers: {
       'Access-Control-Allow-Origin': '*'
     }
-  },
-  chainWebpack: config => {
-    config.when(!isDev, config => {
-      config.plugin('filePlugin').after('html').use(fileListPugin, [
-        {
-          jsExternals: [
-            '/web-public/js/vue.min.js',
-            '/web-public/js/vue-router.min.js',
-            '/web-public/js/vuex.min.js',
-            '/web-public/js/element-ui.js'
-          ]
-        }
-      ])
-      config.externals({
-        'vue': 'Vue',
-        'vue-router': 'VueRouter',
-        'vuex': 'Vuex',
-        'element-ui': 'ELEMENT'
-      })
-    })
   },
   configureWebpack: {
     output: {

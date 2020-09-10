@@ -1,4 +1,4 @@
-import { registerMicroApps, start } from 'qiankun'
+import { registerMicroApps, setDefaultMountApp, start } from 'qiankun'
 
 function genActiveRule (routerPrefix) {
   return location => location.pathname.startsWith(routerPrefix)
@@ -6,14 +6,12 @@ function genActiveRule (routerPrefix) {
 
 export default function run (routes = []) {
   const microApps = routes.map(route => ({
-    name: route.name.replace('/', ''),
-    entry: route.microAppEntry,
+    name: route.name,
+    entry: route.qiankunEntry,
     container: '#subapp-viewport',
-    activeRule: genActiveRule(`${route.path}`),
-    props: {
-      keepAlive: false // 是否缓存，服务于vue的keep-alive
-    }
+    activeRule: genActiveRule(`${route.path}`)
   }))
   registerMicroApps(microApps)
   start()
+  setDefaultMountApp(routes[0].path)
 }

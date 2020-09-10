@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Container from '../views/index.vue'
-import store from '../store'
-import path from 'path'
 
 Vue.use(Router)
 
@@ -12,22 +10,22 @@ Router.prototype.push = function push (location) {
   return originalPush.call(this, location).catch(err => err)
 }
 
+export const routes = [
+  {
+    path: '/refund',
+    name: 'refund',
+    component: Container,
+    qiankunEntry: 'http://123.1.1.1'
+  }, {
+    path: '/charge',
+    name: 'charge',
+    component: Container,
+    qiankunEntry: 'http://localhost:3001'
+  }]
+
 const router = new Router({
   mode: 'history',
-  routes: []
+  routes
 })
-
-export function initRouter (runMicroApps) {
-  store.dispatch('initApplication').then(menuList => {
-    const routes = menuList.map(item => ({
-      path: item.path,
-      name: item.path,
-      component: Container,
-      microAppEntry: '//172.16.6.213' + path.resolve('/', item.relativePath + '/')
-    }))
-    router.addRoutes(routes)
-    runMicroApps && runMicroApps(routes)
-  })
-}
 
 export default router
