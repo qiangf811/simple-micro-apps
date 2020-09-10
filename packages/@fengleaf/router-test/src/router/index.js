@@ -22,7 +22,7 @@ const routes = [
 
 export default function router() {
   return new VueRouter({
-    base: '/receiptPrinting',
+    // base: '',
     // mode: 'history',
     routes
   })
